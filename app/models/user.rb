@@ -2,7 +2,7 @@ class User < ApplicationRecord
 	has_many :entries, dependent: :destroy
 	has_many :cities, through: :entries
 
-	has_attached_file :image, styles: { large: "600x600>", medium: "300x300>", thumb: "150x150#" }, default_url: "/images/:style/missing.png"
+	has_attached_file :image, styles: { large: "600x600>", medium: "300x300>", thumb: "150x150#" }, default_url: "http://www.dentalmarketing.ee/wp-content/uploads/2015/09/staff_placeholder.jpg"
 	validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 
 	before_save { email.downcase! }
