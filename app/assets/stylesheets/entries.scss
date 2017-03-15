@@ -1,3 +1,10 @@
 // Place all the styles related to the Entries controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.full-page-image {
+	width: 100vw;
+	height: 100vh;
+	background: url(https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/CPA2WXSFA2.jpg) no-repeat center center fixed;
+	background-size: cover;
+}
