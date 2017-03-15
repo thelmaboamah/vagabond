@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, only: [:index, :edit, :update]
   before_action :correct_user, only: [:edit, :update]
-  
+
   def index
     @users = User.paginate(page: params[:page])
   end
@@ -39,11 +39,11 @@ class UsersController < ApplicationController
     flash[:success] = "User deleted"
     redirect_to users_url
   end
-  
+
   private
 
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :email, :current_city, :password,:password_confirmation)
+      params.require(:user).permit(:first_name, :last_name, :email, :current_city, :password, :password_confirmation, :image)
     end
 
     #Confirms a logged in user
@@ -53,7 +53,7 @@ class UsersController < ApplicationController
         redirect_to login_url
       end
     end
-    
+
 
     def correct_user
       @user = User.find(params[:id])
