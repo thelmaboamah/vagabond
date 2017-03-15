@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+  
+  root  to: 'entries#index'
+
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
 
-	root 'application#hello'
 
   # User routes
   get '/users', to: 'users#index'
@@ -25,7 +27,7 @@ Rails.application.routes.draw do
   delete '/cities/:id', to: 'cities#destroy'
 
   #Entry routes
-  get '/entries', to: 'entries#index'
+  # get '/entries', to: 'entries#index'
   post '/entries', to: 'entries#create'
   get '/entries/new', to: 'entries#new', as: 'new_entry'
   get '/entries/:id/edit', to: 'entries#edit', as: 'edit_entry'
