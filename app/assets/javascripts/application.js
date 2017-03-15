@@ -15,3 +15,11 @@
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
+
+// $(document).ready(function(){
+// 	var fullPageImage = '<div class="full-page-image"></div>';
+// 	$("body").prepend(fullPageImage);
+// 	setTimeout(function(){
+// 	$(".full-page-image").fadeOut(800);}, 2000);
+	
+// });

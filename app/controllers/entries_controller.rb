@@ -1,11 +1,13 @@
 class EntriesController < ApplicationController
-  belongs_to :user
-  belongs_to :city
+  before_action :logged_in_user, only: [:create, :destroy]
+  before_action :correct_user,   only: :destroy
 
   def index
+    @entries = Entry.all
   end
 
   def show
+
   end
 
   def new
@@ -19,4 +21,9 @@ class EntriesController < ApplicationController
 
   def destroy
   end
+
+  private
+    def entry_params
+      params.require(:entry).permit(:title, :body)
+    end
 end
