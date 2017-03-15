@@ -14,9 +14,9 @@ User.create!(first_name:  "Thelma",
              password_confirmation: "foobar",
              admin: true)
 
-cities = ["London", "San Francisco", "Gibraltar"]
 
 99.times do |n|
+  cities = ["London", "San Francisco", "Gibraltar"]
   first_name  = FFaker::Name.first_name
   last_name = FFaker::Name.last_name
   current_city = cities.sample
@@ -28,4 +28,26 @@ cities = ["London", "San Francisco", "Gibraltar"]
                current_city: current_city,
                password:              password,
                password_confirmation: password)
+end
+
+City.create(name: "San Francisco", photo: "https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/E3PVOJJPNW.jpg")
+City.create(name: "London", photo: "https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/Q5F4Y33RNK.jpg")
+City.create(name: "Gibraltar", photo: "http://www.booknerja.com/media/129127/gibraltar5.jpg")
+
+20.times do |n|
+
+  paragraphs = FFaker::HipsterIpsum.paragraphs(10).join(" ")
+  sentence = FFaker::HipsterIpsum.words(10).join(" ").titleize
+  
+  title = sentence
+  body = paragraphs
+  user_id = rand(1..100)
+  city_id = rand(1..3)
+
+  Entry.create(
+            title: title,
+            body: body,
+            user_id: user_id,
+            city_id: city_id
+    )  
 end
