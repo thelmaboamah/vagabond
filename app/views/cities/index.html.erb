@@ -1,13 +1,11 @@
 <div class='row'>
-  <% @cities.each do |city| %>
   <div class='col-md-offset-1'>
-    <%= image_tag(@city.photo) %>
-  </div><br><br>
-  <% end %>
-  <div class='col-md-offset-1'>
-    <%= image_tag("https://www.wpfreeware.com/wp-content/uploads/2014/09/placeholder-images.jpg") %>
+    <%= link_to image_tag("sf.jpg", :class => "city-index-img img-responsive"), '/cities/1' %>
   </div><br><br>
   <div class='col-md-offset-1'>
-    <%= image_tag("https://www.wpfreeware.com/wp-content/uploads/2014/09/placeholder-images.jpg") %>
+    <%= image_tag("london.jpg", :class => "city-index-img img-responsive") %>
+  </div><br><br>
+  <div class='col-md-offset-1'>
+    <%= image_tag("gb.jpg", :class => "city-index-img img-responsive") %>
   </div>
 </div>

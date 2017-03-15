@@ -20,10 +20,12 @@ class EntriesController < ApplicationController
 
   def update
     @entry.update_attributes(entry_params)
-    redirect_to entry_path(@entry)
+    redirect_to root_path
   end
 
   def destroy
+    @entry.destroy
+    redirect_to root_path
   end
 
   private
