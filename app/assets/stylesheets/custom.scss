@@ -32,10 +32,16 @@ h1 {
 }
 
 
+
 p {
   font-family: sans-serif;
 }
 
 .thumb {
   width: 25px;
+
+.city-index-img {
+  max-width: 90%;
+  box-shadow: 4px 3px 6px rgba(0, 0, 0, 0.26)!important;
+
 }
