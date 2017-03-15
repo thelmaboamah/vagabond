@@ -11,12 +11,16 @@ class EntriesController < ApplicationController
   end
 
   def new
+    @entry = Entry.new
   end
 
   def create
+    @entry = Entry.create(entry_params)
   end
 
   def update
+    @entry.update_attributes(entry_params)
+    redirect_to entry_path(@entry)
   end
 
   def destroy
