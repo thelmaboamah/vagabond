@@ -17,13 +17,13 @@ a:hover {
 }
 
 .entry-box:hover {
-  box-shadow: 4px 3px 6px rgba(0, 0, 0, 0.26)!important;
+  box-shadow: 3px 4px 10px rgba(6, 2, 2, 0.26) !important;
   background-color: #eee;
 }
 
 .entry-box-fix-width:hover {
   max-width: 90%;
-  box-shadow: 4px 3px 6px rgba(0, 0, 0, 0.26)!important;
+  box-shadow: 3px 4px 10px rgba(6, 2, 2, 0.26) !important;
   background-color: #eee;
 }
 
@@ -69,7 +69,6 @@ h2 {
   background-size: cover;
   background-position: center;
   height: 85vh;
-  box-shadow: 4px 3px 6px rgba(0, 0, 0, 0.26)!important;
 }
 
 .toggle-image {
@@ -120,7 +119,7 @@ h2 {
 
 .city-index-img {
   max-width: 90%;
-  box-shadow: 4px 3px 6px rgba(0, 0, 0, 0.26)!important;
+  box-shadow: 3px 4px 10px rgba(6, 2, 2, 0.26) !important;
 
 }
 
@@ -160,7 +159,8 @@ h2 {
 
 /* images */
 .full-width-img {
-  width: 100%;
+  width: 50%;
+  box-shadow: 3px 4px 10px rgba(6, 2, 2, 0.26) !important;
 }
 
 /* entries */
