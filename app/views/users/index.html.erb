@@ -1,20 +1,12 @@
 <h2 class='text-center'>Community</h2>
 <hr>
 
-<div class='row'>
+  
   <% @users.each do |user| %>
-  <div class='col-md-3'>
-    <ul class="users list-unstyled">
-      <li>
-        <%= image_tag("https://cdn.tutsplus.com/net/uploads/legacy/958_placeholders/placehold.gif") %>
-      </li>
-      <li class='text-center'>
-        <%= link_to user.first_name, user %>
-      </li>
-    </ul>
+  <div class='col-md-4 text-center'>
+    <%= link_to image_tag(user.image.url(:medium)), user %>
+    <div><span><%= link_to user.first_name, user %> | </span><span>In: <%= user.current_city %> | </span><span>Entries: <%= link_to user.entries.count, user %></span></div>
   </div>
   <% end %>
-  <%= will_paginate %>
-</div><br><br>
 
-<!-- <%= render 'layouts/footer' %> -->
+<%= will_paginate %>

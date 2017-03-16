@@ -1,6 +1,16 @@
 
-<h3><%= @entry.title %><h3>
-<h6><%= image_tag @entry.user.image.url, class: 'thumb' %><%= @entry.user.first_name + " " + @entry.user.last_name %> | <span>Written <%= time_ago_in_words(@entry.created_at) %> ago </span><%= link_to "🖊", edit_entry_path  %></h6>
+<%= image_tag @entry.image.url(:large), class: "full-width-img" %>
+<h3><%= @entry.title %></h3>
+<%= image_tag @entry.user.image.url, class: 'thumb' %>
+
+<h6 class="inline-heading">
+<%= @entry.user.first_name + " " + @entry.user.last_name %> | Written <%= time_ago_in_words(@entry.created_at) %> ago
+</h6>
+<% if current_user.id == @entry.user.id %>
+<span>
+<%= link_to "🖊", edit_entry_path(@entry) %>
+</span>
+<% end %>
 <hr>
 <p><%= @entry.body %></p>
 

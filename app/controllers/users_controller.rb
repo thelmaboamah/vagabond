@@ -3,11 +3,11 @@ class UsersController < ApplicationController
   before_action :correct_user, only: [:edit, :update]
 
   def index
-    @users = User.paginate(page: params[:page], per_page: 20)
+    @users = User.paginate(page: params[:page], per_page: 15)
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = User.friendly.find(params[:id])
   end
 
   def new
@@ -18,7 +18,7 @@ class UsersController < ApplicationController
    @user = User.new(user_params)
     if @user.save
       log_in @user
-      flash[:success] = "Welcome to the Sample App!"
+      flash[:success] = "Welcome to Vagabond!"
       redirect_to @user
     else
       render 'new'
@@ -43,7 +43,7 @@ class UsersController < ApplicationController
   private
 
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :email, :current_city, :password, :password_confirmation, :image)
+      params.require(:user).permit(:first_name, :last_name, :email, :current_city, :password, :password_confirmation, :image, :slug)
     end
 
     #Confirms a logged in user
@@ -56,7 +56,7 @@ class UsersController < ApplicationController
 
 
     def correct_user
-      @user = User.find(params[:id])
+      @user = User.friendly.find(params[:id])
       redirect_to(root_url) unless current_user?(@user)
     end
 
