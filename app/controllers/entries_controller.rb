@@ -1,5 +1,5 @@
 class EntriesController < ApplicationController
-  before_action :logged_in_user, only: [:create, :destroy]
+  before_action :logged_in?, only: [:create, :destroy]
   before_action :correct_user,   only: :destroy
 
   def index
@@ -15,7 +15,7 @@ class EntriesController < ApplicationController
   end
 
   def create
-    @entry = Entry.create(entry_params)
+    @entry = current_user.entries.build(entry_params)
   end
 
   def update
@@ -30,6 +30,11 @@ class EntriesController < ApplicationController
 
   private
     def entry_params
-      params.require(:entry).permit(:title, :body, :image)
+      params.require(:entry).permit(:title, :body, :image, :user_id, :city_id)
+    end
+
+    def correct_user
+      @entry = current_user.entries.find_by(id: params[:id])
+      redirect_to root_url if @entry.nil?
     end
 end
