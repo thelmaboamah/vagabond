@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = User.friendly.find(params[:id])
   end
 
   def new
@@ -43,7 +43,7 @@ class UsersController < ApplicationController
   private
 
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :email, :current_city, :password, :password_confirmation, :image)
+      params.require(:user).permit(:first_name, :last_name, :email, :current_city, :password, :password_confirmation, :image, :slug)
     end
 
     #Confirms a logged in user
@@ -56,7 +56,7 @@ class UsersController < ApplicationController
 
 
     def correct_user
-      @user = User.find(params[:id])
+      @user = User.friendly.find(params[:id])
       redirect_to(root_url) unless current_user?(@user)
     end
 
