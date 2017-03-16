@@ -60,12 +60,58 @@ h2 {
   }
 }
 
+.content-container {
+  margin-top: 90vh;
+}
+
 .img-div {
-  background: url(/assets/sf.jpg) no-repeat;
+  background-repeat: no-repeat;
   background-size: cover;
-  background-position:center;
+  background-position: center;
   height: 85vh;
   box-shadow: 4px 3px 6px rgba(0, 0, 0, 0.26)!important;
+}
+
+.toggle-image {
+  transition: opacity 4s ease-in-out;
+  position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+ 	height: 800px;
+
+}
+
+.first {
+  background-image: url(/assets/sf.jpg);
+  z-index: -3;
+  opacity: 0;
+
+}
+
+.second {
+  background-image: url(/assets/london.jpg);
+  z-index: -2;
+  opacity: 0;
+
+}
+
+.third {
+  background-image: url(/assets/gb.jpg);
+  z-index: -1;
+  opacity: 0;
+}
+
+.first.show {
+  opacity: 1;
+}
+
+.second.show {
+  opacity: 1;
+}
+
+.third.show {
+  opacity: 1;
 }
 
 .thumb {
