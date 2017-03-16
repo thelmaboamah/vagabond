@@ -17,7 +17,7 @@ a:hover {
 }
 
 p {
-  font-family: 'Merriweather', serif!important;
+  font-family: 'Merriweather', serif;
 }
 
 h1 {
@@ -30,21 +30,19 @@ h2 {
   font-family: 'Chonburi', cursive;
 }
 
-.city-description-div {
-  max-width: 960px;
+.inline-heading {
+  display: inline;
 }
+
+/* navigation */
 
 .navbar-nav {
   width: 100%;
   text-align: center;
-  > li {
+   li {
     float: none;
     display: inline-block;
   }
-}
-
-p {
-  font-family: sans-serif;
 }
 
 .thumb {
@@ -88,4 +86,21 @@ p {
 
 .pagination > li > a, .pagination > li > span {
   color: #28045f;
+}
+
+/* images */
+.full-width-img {
+  width: 100%;
+}
+
+/* entries */
+.user-show-entries {
+  margin-bottom: 40px;
+}
+
+/* user profiles */
+.profile-info{
+  li {
+    margin-bottom: 8px;
+  }
 }

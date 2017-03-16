@@ -23,17 +23,15 @@ Rails.application.routes.draw do
   get '/cities/:id/edit', to: 'cities#edit', as: 'edit_city'
   get '/cities/:id', to: 'cities#show', as: 'city_show'
   patch '/cities/:id', to: 'cities#update'
-  put '/cities/:id', to: 'cities#update'
   delete '/cities/:id', to: 'cities#destroy'
 
   #Entry routes
-  # get '/entries', to: 'entries#index'
+  get '/entries', to: 'entries#index'
   post '/entries', to: 'entries#create'
   get '/entries/new', to: 'entries#new', as: 'new_entry'
   get '/entries/:id/edit', to: 'entries#edit', as: 'edit_entry'
   get '/entries/:id', to: 'entries#show', as: 'entry_show'
-  patch '/entries/:id', to: 'entries#update'
-  put '/entries/:id', to: 'entries#update'
+  patch '/entries/:id', to: 'entries#update', as: 'entry_update'
   delete '/entries/:id', to: 'entries#destroy'
 
 
