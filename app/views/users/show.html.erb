@@ -12,7 +12,7 @@
     </ul>
   </aside>
   <div class="col-md-7 pull-right">
-    <h2>Your entries <%= link_to "➕", new_entry_path, class: "btn btn-default" %></h2>
+    <h2>Your entries <%= link_to "➕", new_entry_path %></h2>
     <% @user.entries.each do |entry| %>
       <div class="user-show-entries">
         <h4><%= entry.created_at.strftime("%m/%d/%Y") %> | <%= link_to entry.title, entry_show_path(entry.id) %></h4>
