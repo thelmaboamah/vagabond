@@ -7,7 +7,7 @@ class EntriesController < ApplicationController
   end
 
   def show
-    @entry = Entry.find(params[:id])
+    @entry = Entry.friendly.find(params[:id])
   end
 
   def new
@@ -30,6 +30,6 @@ class EntriesController < ApplicationController
 
   private
     def entry_params
-      params.require(:entry).permit(:title, :body, :image)
+      params.require(:entry).permit(:title, :body, :image, :slug)
     end
 end
