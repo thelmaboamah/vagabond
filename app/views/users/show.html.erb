@@ -9,6 +9,8 @@
       <li>📍 <%= @user.current_city %></li>
       <li>Memeber since: <%= @user.created_at.strftime("%m/%d/%Y") %></li>
       <li>Entries posted: <%= @user.entries.count %></li>
+      <li>Business Role: <%= @user.business_role %></li>
+      <li>Description: <%= @user.description %></li>
       <li><%= link_to "Add Entry", new_entry_path, class: "fake-btn" %></li>
     </ul>
   </aside>
