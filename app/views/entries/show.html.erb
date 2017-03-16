@@ -1,15 +1,23 @@
+<div class='row'>
+  <% if logged_in? && current_user.id == @entry.user.id %>
+    <span>
+      <%= button_to "Delete", delete_entry_path, method: :delete %>
+    </span>
+  <% end %>
+  <br>
+    <%= image_tag @entry.image.url(:large), class: "full-width-img" %>
+  <h3><%= @entry.title %></h3>
+    <%= image_tag @entry.user.image.url, class: 'thumb' %>
 
-<%= image_tag @entry.image.url(:large), class: "full-width-img" %>
-<h3><%= @entry.title %></h3>
-<%= image_tag @entry.user.image.url, class: 'thumb' %>
+  <h6 class="inline-heading">
+    <%= @entry.user.first_name + " " + @entry.user.last_name %> | Written <%= time_ago_in_words(@entry.created_at) %> ago
+  </h6>
+  <% if logged_in? && current_user.id == @entry.user.id %>
+    <span>
+      <%= link_to " 🖊 ", edit_entry_path %>
+    </span>
+  <% end %>
+  <hr>
+  <p><%= @entry.body %></p>
 
-<h6 class="inline-heading">
-<%= @entry.user.first_name + " " + @entry.user.last_name %> | Written <%= time_ago_in_words(@entry.created_at) %> ago
-</h6>
-<% if logged_in? && current_user.id == @entry.user.id %>
-<span>
-<%= link_to "🖊", edit_entry_path(@entry) %>
-</span>
-<% end %>
-<hr>
-<p><%= @entry.body %></p>
+</div>
