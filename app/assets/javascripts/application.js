@@ -21,5 +21,16 @@
 // 	$("body").prepend(fullPageImage);
 // 	setTimeout(function(){
 // 	$(".full-page-image").fadeOut(800);}, 2000);
-	
+
 // });
+
+$(document).ready(function(){
+	$(".img-div").on('click', function() {
+		$(".img-div").css("background-image",
+		"url(http://www.premiumtours.ca/upimg/groupe/jour/526__g958_20160907_164957-0.jpg)")
+	});
+	$(".img-div").on('click', function() {
+		$(".img-div").css("background-image",
+		"url(/assests/images/gb.jpg)")
+	});
+});

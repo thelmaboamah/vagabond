@@ -3,10 +3,13 @@
   <hr>
 
   <% @city.entries.each do |entry| %>
-    <div class='col-md-6'>
+    <div class='col-md-6 entry-box'>
       <h4><%= link_to entry.title, entry_show_path(entry.id) %></h4>
-      <p><%= entry.user.first_name + " " + entry.user.last_name %> | <span>Written <%= time_ago_in_words(entry.created_at) %> ago</span></p>
+      <p class='user-entry-p'><%= entry.user.first_name + " " + entry.user.last_name %> | <span>Written <%= time_ago_in_words(entry.created_at) %> ago</span></p>
       <p><%= entry.body.truncate(200) %></p>
     </div>
   <% end %>
 </div>
+
+<hr>
+<%= button_to "Add Entry", new_entry_path %>

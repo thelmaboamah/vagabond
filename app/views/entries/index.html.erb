@@ -1,13 +1,16 @@
+<div class='img-div'>
+</div>
+
 <h2 class='text-center'>Latest entries</h2>
 <hr>
 
 <div class='row'>
   <div class='col-md-offset-1'>
     <% @entries.each do |entry| %>
-      <div class='col-md-4'>
+      <div class='col-md-4 col-sm-6 col-xs-12'>
         <%= image_tag('http://greentreesarborcareinc.com/wp-content/uploads/2014/01/image-placeholder.jpg') %>
         <h4><%= link_to entry.title, entry_show_path(entry.id) %></h4>
-        <p><%= entry.user.first_name + " " + entry.user.last_name %> | <span>Written <%= time_ago_in_words(entry.created_at) %> ago</p>
+        <p class='user-entry-p'><%= entry.user.first_name + " " + entry.user.last_name %> | <span>Written <%= time_ago_in_words(entry.created_at) %> ago</p>
         <p><%= entry.body.truncate(35) %></p>
       </div>
     <% end %>

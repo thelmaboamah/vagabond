@@ -4,9 +4,11 @@
     <%= link_to image_tag(city.photo, class: "city-index-img img-responsive"), city_show_path(city) %>
 
   		<% city.entries.first(3).each do |entry| %>
+      <div class='entry-box-fix-width'>
 				<h4><%= link_to entry.title, entry_show_path(entry.id) %></h4>
 				<p><%= entry.user.first_name + " " + entry.user.last_name %> | <span>Written <%= time_ago_in_words(entry.created_at) %> ago</span></p>
 				<p><%= entry.body.truncate(131) %></p>
+      </div>
   		<% end %>
 			<p><%= link_to "Read more...", city_show_path(city) %></p>
 		<% end %>
