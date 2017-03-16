@@ -2,7 +2,7 @@
   <div class='col-md-5'>
     <ul class='profile-info list-unstyled text-center'>
       <li><%= image_tag @user.image.url(:medium) %></li><br>
-      <li><%= @user.first_name %></li><br>
+      <li><%= @user.first_name + " " + @user.last_name %></li><br>
       <li>📍 <%= @user.current_city %></li><br>
       <li>Joined on: <%= @user.created_at %></li><br>
       <li>✉️ <%= @user.email %></li>
