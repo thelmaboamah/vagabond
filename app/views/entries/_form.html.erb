@@ -1,4 +1,10 @@
 <%= form_for @entry, html: { multipart: true } do |f| %>
+      
+      <%= f.hidden_field :user_id %>
+			
+			<%= f.label :city_id %>
+			<%= f.collection_select :city_id, City.order(:name),:id,:name %>
+
       <%= f.label :image %>
       <%= f.file_field :image, class: 'form-control' %>
 

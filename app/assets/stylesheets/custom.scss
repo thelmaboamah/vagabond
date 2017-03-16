@@ -3,7 +3,7 @@
 
 
 body {
-  color: black;
+  color: #28045f;
   font-family: 'Playfair Display SC', serif;
 }
 
@@ -13,7 +13,11 @@ a {
 
 a:hover {
   text-decoration: none;
-  color: #28045f;
+  color: #49306f;
+}
+
+p {
+  font-family: 'Merriweather', serif;
 }
 
 h1 {
@@ -26,21 +30,19 @@ h2 {
   font-family: 'Chonburi', cursive;
 }
 
-.city-description-div {
-  max-width: 960px;
+.inline-heading {
+  display: inline;
 }
+
+/* navigation */
 
 .navbar-nav {
   width: 100%;
   text-align: center;
-  > li {
+   li {
     float: none;
     display: inline-block;
   }
-}
-
-p {
-  font-family: sans-serif;
 }
 
 .thumb {
@@ -59,7 +61,7 @@ p {
 
 .pagination > li.active > a {
   background-color: #28045f;
-  border-color: #28045f;
+  border-color: none;
 }
 
 .pagination > li > a:hover,
@@ -69,6 +71,36 @@ p {
   color: #8666c0;
 }
 
+.pagination > .active > a,
+.pagination > .active > a:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span,
+.pagination > .active > span:hover,
+.pagination > .active > span:focus {
+  z-index: 3;
+  color: #fff;
+  background-color: #8666c0;
+  border-color: #8666c0;
+  cursor: default;
+}
+
 .pagination > li > a, .pagination > li > span {
   color: #28045f;
+}
+
+/* images */
+.full-width-img {
+  width: 100%;
+}
+
+/* entries */
+.user-show-entries {
+  margin-bottom: 40px;
+}
+
+/* user profiles */
+.profile-info{
+  li {
+    margin-bottom: 8px;
+  }
 }

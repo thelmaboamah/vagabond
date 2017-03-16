@@ -1,15 +1,24 @@
-<div class='row'>
-  <div class='col-md-5'>
+ <aside class='col-md-5'>
     <ul class='profile-info list-unstyled text-center'>
-      <li><%= image_tag @user.image.url(:medium) %></li><br>
-      <li><%= @user.first_name %></li><br>
-      <li>📍 <%= @user.current_city %></li><br>
-      <li>Joined on: <%= @user.created_at %></li><br>
-      <li>✉️ <%= @user.email %></li>
+      <li>
+        <%= image_tag @user.image.url(:medium) %>
+      </li>
+      <li><%= @user.first_name + " " + @user.last_name %>
+        <span><%= link_to "🖊", edit_user_path  %></span>
+      </li>
+      <li>📍 <%= @user.current_city %></li>
+      <li>Memeber since: <%= @user.created_at.strftime("%m/%d/%Y") %></li>
+      <li>Entries posted: <%= @user.entries.count %></li>
     </ul>
+  </aside>
+  <div class="col-md-7 pull-right">
+    <% @user.entries.each do |entry| %>
+      <div class="user-show-entries">
+        <%= image_tag entry.image.url(:medium), class: "full-width-img" %>
+        <h4><%= link_to entry.title, entry_show_path(entry.id) %></h4>
+        <p>Written <%= time_ago_in_words(entry.created_at) %> ago</p>
+        <p><%= entry.body.truncate(300) %></p>
+      </div>
+    <% end %>
   </div>
-  <div class='col-md-7'>
-    <%= image_tag("http://www.cheerfulheartsfoundation.org/wp-content/uploads/2013/04/placeholder.png") %><br><br><br>
-    <%= image_tag("http://www.cheerfulheartsfoundation.org/wp-content/uploads/2013/04/placeholder.png") %>
-  </div>
-</div>
+    
