@@ -7,6 +7,10 @@ body {
   font-family: 'Playfair Display SC', serif;
 }
 
+a {
+  color: inherit;
+}
+
 a:hover {
   text-decoration: none;
   color: #28045f;
@@ -16,6 +20,10 @@ h1 {
   font-family: 'Chonburi', cursive;
   text-decoration: none;
   font-size: 55px;
+}
+
+h2 {
+  font-family: 'Chonburi', cursive;
 }
 
 .city-description-div {
@@ -43,4 +51,24 @@ p {
   max-width: 90%;
   box-shadow: 4px 3px 6px rgba(0, 0, 0, 0.26)!important;
 
+}
+
+.pagination {
+  margin-left: 14.5vw;
+}
+
+.pagination > li.active > a {
+  background-color: #28045f;
+  border-color: #28045f;
+}
+
+.pagination > li > a:hover,
+.pagination > li > a:focus,
+.pagination > li > span:hover,
+.pagination > li > span:focus {
+  color: #8666c0;
+}
+
+.pagination > li > a, .pagination > li > span {
+  color: #28045f;
 }

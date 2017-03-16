@@ -36,9 +36,9 @@ City.create(name: "Gibraltar", photo: "http://www.booknerja.com/media/129127/gib
 
 20.times do |n|
 
-  paragraphs = FFaker::HipsterIpsum.paragraphs(10).join(" ")
-  sentence = FFaker::HipsterIpsum.words(5).join(" ").titleize
-  
+  paragraphs = FFaker::HipsterIpsum.paragraphs(5).join(" ")
+  sentence = FFaker::HipsterIpsum.words(3).join(" ").titleize
+
   title = sentence
   body = paragraphs
   user_id = rand(1..100)
@@ -49,5 +49,5 @@ City.create(name: "Gibraltar", photo: "http://www.booknerja.com/media/129127/gib
             body: body,
             user_id: user_id,
             city_id: city_id
-    )  
+    )
 end
