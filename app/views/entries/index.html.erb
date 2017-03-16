@@ -4,19 +4,16 @@
   <div class='col-md-offset-1'>
 
       <div class='col-md-4'>
+
+        <% @entries.each do |entry| %>
         <%= image_tag('http://greentreesarborcareinc.com/wp-content/uploads/2014/01/image-placeholder.jpg') %>
-        <p>Title</p>
-        <p>preview of entry</p>
-      </div>
-      <div class='col-md-4'>
-        <%= image_tag('http://greentreesarborcareinc.com/wp-content/uploads/2014/01/image-placeholder.jpg') %>
-        <p>Title</p>
-        <p>preview of entry</p>
-      </div>
-      <div class='col-md-4'>
-        <%= image_tag('http://greentreesarborcareinc.com/wp-content/uploads/2014/01/image-placeholder.jpg') %>
-        <p>Title</p>
-        <p>preview of entry</p>
+        <p><%= link_to entry.title, entry_show_path(entry.id) %></p>
+        <p><%= entry.user.first_name + " " + entry.user.last_name %> | <span>Written <%= time_ago_in_words(entry.created_at) %> ago</p>
+        <p><%= entry.body.truncate(250) %></p>
+        
+        <% end %>
       </div>
   </div>
 </div>
+
+<%= will_paginate %>

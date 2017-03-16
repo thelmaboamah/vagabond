@@ -3,6 +3,7 @@
   	<h1 class='text-center'><%= link_to "VAGABOND", root_path %></h1>
     <nav>
       <ul class="nav navbar-nav">
+        <li><%= link_to "Home", root_path %></li>
         <li><%= link_to "Cities", cities_path %></li>
         <li><%= link_to "Community", users_path %></li>
         <% if logged_in? %>

@@ -37,7 +37,7 @@ City.create(name: "Gibraltar", photo: "http://www.booknerja.com/media/129127/gib
 20.times do |n|
 
   paragraphs = FFaker::HipsterIpsum.paragraphs(10).join(" ")
-  sentence = FFaker::HipsterIpsum.words(10).join(" ").titleize
+  sentence = FFaker::HipsterIpsum.words(5).join(" ").titleize
   
   title = sentence
   body = paragraphs
