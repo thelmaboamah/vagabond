@@ -15,7 +15,7 @@ class EntriesController < ApplicationController
   end
 
   def create
-    @entry = Entry.create(entry_params)
+    @entry = Entry.new(entry_params)
   end
 
   def update
@@ -30,6 +30,6 @@ class EntriesController < ApplicationController
 
   private
     def entry_params
-      params.require(:entry).permit(:title, :body)
+      params.require(:entry).permit(:title, :body, :image)
     end
 end
