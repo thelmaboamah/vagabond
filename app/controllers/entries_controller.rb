@@ -15,7 +15,7 @@ class EntriesController < ApplicationController
   end
 
   def create
-    @entry = Entry.new(entry_params)
+    @entry = Entry.create(entry_params)
   end
 
   def update
