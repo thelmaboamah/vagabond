@@ -1,5 +1,5 @@
 
 <h3><%= @entry.title %><h3>
-<h6><%= image_tag @entry.user.image.url, class: 'thumb' %><%= @entry.user.first_name + " " + @entry.user.last_name %> | <span>Written <%= time_ago_in_words(@entry.created_at) %> ago</span></h6>
+<h6><%= image_tag @entry.user.image.url, class: 'thumb' %><%= @entry.user.first_name + " " + @entry.user.last_name %> | <span>Written <%= time_ago_in_words(@entry.created_at) %> ago </span><%= link_to "🖊", edit_entry_path  %></h6>
+<hr>
 <p><%= @entry.body %></p>
-

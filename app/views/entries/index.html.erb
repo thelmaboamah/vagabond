@@ -1,18 +1,16 @@
-<h1>Entries go here</h1>
+<h2 class='text-center'>Latest entries</h2>
+<hr>
 
 <div class='row'>
   <div class='col-md-offset-1'>
-
+    <% @entries.each do |entry| %>
       <div class='col-md-4'>
-
-        <% @entries.each do |entry| %>
         <%= image_tag('http://greentreesarborcareinc.com/wp-content/uploads/2014/01/image-placeholder.jpg') %>
         <p><%= link_to entry.title, entry_show_path(entry.id) %></p>
         <p><%= entry.user.first_name + " " + entry.user.last_name %> | <span>Written <%= time_ago_in_words(entry.created_at) %> ago</p>
-        <p><%= entry.body.truncate(250) %></p>
-        
-        <% end %>
+        <p><%= entry.body.truncate(45) %></p>
       </div>
+    <% end %>
   </div>
 </div>
 
