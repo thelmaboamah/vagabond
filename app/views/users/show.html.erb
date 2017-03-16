@@ -9,20 +9,13 @@
       <li>📍 <%= @user.current_city %></li>
       <li>Memeber since: <%= @user.created_at.strftime("%m/%d/%Y") %></li>
       <li>Entries posted: <%= @user.entries.count %></li>
-      <li><%= link_to "Add Entry", new_entry_path, class: "fake-btn" %></li>
     </ul>
   </aside>
   <div class="col-md-7 pull-right">
+    <h2>Your entries <%= link_to "➕", new_entry_path, class: "btn btn-default" %></h2>
     <% @user.entries.each do |entry| %>
       <div class="user-show-entries">
-        <%= image_tag entry.image.url(:medium), class: "full-width-img" %>
-        <h4><%= link_to entry.title, entry_show_path(entry.id) %></h4>
-        <p>Written <%= time_ago_in_words(entry.created_at) %> ago</p>
-        <p><%= entry.body.truncate(300) %></p>
+        <h4><%= entry.created_at.strftime("%m/%d/%Y") %> | <%= link_to entry.title, entry_show_path(entry.id) %></h4>
       </div>
     <% end %>
   </div>
-  <div class='col-md-7'>
-
-  </div>
-</div>
