@@ -1,4 +1,5 @@
 class EntriesController < ApplicationController
+
   before_action :logged_in?, only: [:create, :edit, :destroy]
   before_action :correct_user,   only: [ :edit, :destroy]
 

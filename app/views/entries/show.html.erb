@@ -13,3 +13,5 @@
 <% end %>
 <hr>
 <p><%= @entry.body %></p>
+
+<%= button_to "Delete", delete_entry_path(@entry), method: :delete %>

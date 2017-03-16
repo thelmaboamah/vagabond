@@ -13,11 +13,26 @@ a {
 
 a:hover {
   text-decoration: none;
-  color: #49306f;
+  color: #5b4b73;
+}
+
+.entry-box:hover {
+  box-shadow: 4px 3px 6px rgba(0, 0, 0, 0.26)!important;
+  background-color: #eee;
+}
+
+.entry-box-fix-width:hover {
+  max-width: 90%;
+  box-shadow: 4px 3px 6px rgba(0, 0, 0, 0.26)!important;
+  background-color: #eee;
 }
 
 p {
   font-family: 'Merriweather', serif;
+}
+
+.user-entry-p, h6 {
+  color: black!important;
 }
 
 h1 {
@@ -43,6 +58,14 @@ h2 {
     float: none;
     display: inline-block;
   }
+}
+
+.img-div {
+  background: url(/assets/sf.jpg) no-repeat;
+  background-size: cover;
+  background-position:center;
+  height: 85vh;
+  box-shadow: 4px 3px 6px rgba(0, 0, 0, 0.26)!important;
 }
 
 .thumb {
@@ -84,7 +107,8 @@ h2 {
   cursor: default;
 }
 
-.pagination > li > a, .pagination > li > span {
+.pagination > li > a,
+.pagination > li > span {
   color: #28045f;
 }
 
