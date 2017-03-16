@@ -61,7 +61,7 @@ h2 {
 }
 
 .content-container {
-  margin-top: 90vh;
+  margin-top: 112vh;
 }
 
 .img-div {
@@ -73,10 +73,10 @@ h2 {
 }
 
 .toggle-image {
-  transition: opacity 4s ease-in-out;
+  transition: opacity 3s ease-in-out;
   position: absolute;
 	width: 100%;
-	top: 0;
+	top: 20vh;
 	left: 0;
  	height: 800px;
 
