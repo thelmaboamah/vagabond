@@ -19,6 +19,8 @@
 
 - If you want to include some dummy info on your local server, run ```rails db:seed``` some seed data. Additionally, you can modify the seed file to show whatever types of information suits your requirements.
 
+- You have all the pieces set up, now spin up a local server ```rails server```.
+
 :tada:
 - ****
 
