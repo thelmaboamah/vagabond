@@ -5,11 +5,13 @@
 - Ruby on Rails
 - RESTful API
 - HTML
-- CSS, Bootstrap
+- CSS, SCSS, Bootstrap
+- JavaScript Jquery
 - Heroku hosting
 - ImageMagick
 - Paperclip
 - FriendlyId
+- Photoshop!
 
 ## Installation
 
@@ -42,4 +44,4 @@
 - Admin role with city object CRUD actions.
 - City specific Points Of Interest. Way to view entries based on those POI tags presence.
 - Like function? (Ugh).
-- 
+-
