@@ -12,20 +12,26 @@ User.create!(first_name:  "Thelma",
              current_city: "San Francisco",
              password:              "foobar",
              password_confirmation: "foobar",
+             description: FFaker::HipsterIpsum.paragraphs(1).join(" "),
+             business_role: "Lead Tastemaker",
              admin: true)
 
 
-99.times do |n|
+29.times do |n|
   cities = ["London", "San Francisco", "Gibraltar"]
   first_name  = FFaker::Name.first_name
   last_name = FFaker::Name.last_name
   current_city = cities.sample
   email = FFaker::Internet.email
   password = "password"
+  description = FFaker::HipsterIpsum.paragraphs(1).join(" ")
+  business_role = "Tastemaker"
   User.create!(first_name:  first_name,
                last_name: last_name,
                email: email,
                current_city: current_city,
+               business_role: business_role,
+               description: description,
                password:              password,
                password_confirmation: password)
 end
@@ -41,7 +47,7 @@ City.create(name: "Gibraltar", photo: "http://www.booknerja.com/media/129127/gib
 
   title = sentence
   body = paragraphs
-  user_id = rand(1..100)
+  user_id = rand(1..30)
   city_id = rand(1..3)
 
   Entry.create(
