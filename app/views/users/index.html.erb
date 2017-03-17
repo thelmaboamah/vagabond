@@ -1,12 +1,10 @@
-<h2 class='text-center'>Community</h2>
 <hr>
-
-  
   <% @users.each do |user| %>
   <div class='col-md-4 text-center'>
     <%= link_to image_tag(user.image.url(:medium)), user %>
-    <div><span><%= link_to user.first_name, user %> | </span><span>In: <%= user.current_city %> | </span><span>Entries: <%= link_to user.entries.count, user %></span></div>
+    <div><span><%= link_to user.first_name, user %> | </span><span><%= user.current_city %> | </span><span>Entries: <%= link_to user.entries.count, user %></span></div>
   </div>
   <% end %>
+<hr>
 
 <%= will_paginate %>

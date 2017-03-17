@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       log_in user
       redirect_to user
-      flash[:success] = "Welcome back!"
+      flash[:success] = "Welcome back, #{user.first_name}!"
     else
       flash.now[:danger] = 'Invalid email/password combination' # Displays flash messages on rendered pages
       render 'new'
