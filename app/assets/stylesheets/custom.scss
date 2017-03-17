@@ -32,13 +32,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .entry-box:hover {
-  box-shadow: 4px 3px 6px rgba(0, 0, 0, 0.26)!important;
+  box-shadow: 3px 4px 10px rgba(6, 2, 2, 0.26) !important;
   background-color: #eee;
 }
 
 .entry-box-fix-width:hover {
   max-width: 90%;
-  box-shadow: 4px 3px 6px rgba(0, 0, 0, 0.26)!important;
+  box-shadow: 3px 4px 10px rgba(6, 2, 2, 0.26) !important;
   background-color: #eee;
 }
 
@@ -61,12 +61,57 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.content-container {
+  margin-top: 112vh;
+}
+
 .img-div {
-  background: url(/assets/sf.jpg) no-repeat;
+  background-repeat: no-repeat;
   background-size: cover;
-  background-position:center;
+  background-position: center;
   height: 85vh;
-  box-shadow: 4px 3px 6px rgba(0, 0, 0, 0.26)!important;
+}
+
+.toggle-image {
+  transition: opacity 3s ease-in-out;
+  position: absolute;
+	width: 100%;
+	top: 20vh;
+	left: 0;
+ 	height: 800px;
+
+}
+
+.first {
+  background-image: url(/assets/sf.jpg);
+  z-index: -3;
+  opacity: 0;
+
+}
+
+.second {
+  background-image: url(/assets/london.jpg);
+  z-index: -2;
+  opacity: 0;
+
+}
+
+.third {
+  background-image: url(/assets/gb.jpg);
+  z-index: -1;
+  opacity: 0;
+}
+
+.first.show {
+  opacity: 1;
+}
+
+.second.show {
+  opacity: 1;
+}
+
+.third.show {
+  opacity: 1;
 }
 
 .thumb {
@@ -75,7 +120,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .city-index-img {
   max-width: 90%;
-  box-shadow: 4px 3px 6px rgba(0, 0, 0, 0.26)!important;
+  box-shadow: 3px 4px 10px rgba(6, 2, 2, 0.26) !important;
 
 }
 
@@ -115,7 +160,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* images */
 .full-width-img {
-  width: 100%;
+  width: 50%;
+  box-shadow: 3px 4px 10px rgba(6, 2, 2, 0.26) !important;
 }
 
 /* entries */

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   root  to: 'entries#index'
 
   get '/login', to: 'sessions#new'
@@ -32,7 +32,7 @@ Rails.application.routes.draw do
   get '/entries/:id/edit', to: 'entries#edit', as: 'edit_entry'
   get '/entries/:id', to: 'entries#show', as: 'entry_show'
   patch '/entries/:id', to: 'entries#update', as: 'entry_update'
-  delete '/entries/:id', to: 'entries#destroy'
+  delete '/entries/:id', to: 'entries#destroy', as: 'delete_entry'
 
 
 end
