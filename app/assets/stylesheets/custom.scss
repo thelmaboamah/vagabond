@@ -21,19 +21,14 @@ a:hover {
   background-color: #eee;
 }
 
-.entry-box-fix-width:hover {
-  max-width: 90%;
-  box-shadow: 3px 4px 10px rgba(6, 2, 2, 0.26) !important;
-  background-color: #eee;
+textarea {
+  height: 300px!important;
 }
 
 p {
   font-family: 'Merriweather', serif;
 }
 
-.user-entry-p, h6 {
-  color: black!important;
-}
 
 h1 {
   font-family: 'Chonburi', cursive;
@@ -117,10 +112,15 @@ h2 {
   width: 25px;
 }
 
-.city-index-img {
-  max-width: 90%;
+.polaroid {
   box-shadow: 3px 4px 10px rgba(6, 2, 2, 0.26) !important;
+  padding: 23px 20px 84px 20px;
+  background: #eee;
+}
 
+.city-name {
+  margin-top: -7vh;
+  margin-left: 30vw;
 }
 
 .pagination {
@@ -173,9 +173,4 @@ h2 {
   li {
     margin-bottom: 8px;
   }
-}
-
-.fake-btn {
-  background: gray;
-  padding: 5px;
 }
