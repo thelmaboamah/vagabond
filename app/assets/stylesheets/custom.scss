@@ -44,6 +44,10 @@ h1 {
   background-color: #eee;
 }
 
+label {
+  padding-top: 7px;
+}
+
 textarea {
   height: 300px!important;
 }
@@ -61,6 +65,11 @@ textarea {
 }
 
 /* navigation */
+
+#login-nav {
+  text-align: end;
+  padding-top: 10px;
+}
 
 .navbar-nav {
   width: 100%;
@@ -88,7 +97,6 @@ textarea {
   transition: opacity 3s ease-in-out;
   position: absolute;
 	width: 100%;
-	top: 20vh;
 	left: 0;
  	height: 800px;
 
@@ -96,44 +104,70 @@ textarea {
 
 .first {
   background-image: url(/assets/sf.jpg);
-  z-index: -3;
+  z-index: -6;
   opacity: 0;
 
 }
 
 .second {
-  background-image: url(/assets/london.jpg);
-  z-index: -2;
+  background-image: url(/assets/sf1.jpg);
+  z-index: -5;
   opacity: 0;
 
 }
 
 .third {
-  background-image: url(/assets/gb.jpg);
-  z-index: -1;
+  background-image: url(/assets/london-copy.jpg);
+  z-index: -4;
   opacity: 0;
 }
 
-.first.show {
+.fourth {
+  background-image: url(/assets/ldn.jpg);
+  z-index: -3;
+  opacity: 0;
+
+}
+
+.fifth {
+  background-image: url(/assets/gb-copy.jpg);
+  z-index: -2;
+  opacity: 0;
+
+}
+
+.sixth {
+  background-image: url(/assets/gb2-copy.jpg);
+  z-index: -1;
+  opacity: 0;
+
+}
+
+.first.show, .second.show,
+.third.show, .fourth.show,
+.fifth.show, .sixth.show {
   opacity: 1;
 }
 
-.second.show {
-  opacity: 1;
-}
-
-.third.show {
-  opacity: 1;
+.alert-danger, .alert-success {
+  width: 300px;
+  margin-left: 34%;
+  text-align: center;
 }
 
 .thumb {
   width: 25px;
 }
 
+.img-circle {
+  width: 40px;
+  border: $eggplant 2px solid;
+}
+
 .polaroid {
   box-shadow: 3px 4px 10px rgba(6, 2, 2, 0.26) !important;
   padding: 23px 20px 84px 20px;
-  background: #eee;
+  background: white;
 }
 
 .city-name {
@@ -142,7 +176,7 @@ textarea {
 }
 
 .pagination {
-  margin-left: 14.5vw;
+  margin-left: 9.5vw;
 }
 
 .pagination > li.active > a {
