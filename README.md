@@ -6,6 +6,10 @@
 - RESTful API
 - HTML
 - CSS, Bootstrap
+- Heroku hosting
+- ImageMagick
+- Paperclip
+- FriendlyId
 
 ## Installation
 
@@ -22,7 +26,7 @@
 - You have all the pieces set up, now spin up a local server ```rails server```.
 
 :tada:
-- ****
+****
 
 ## Existing Features
 - User log in with privileges based on role
@@ -35,3 +39,7 @@
 - Pretty urls
 
 ## Planned Features
+- Admin role with city object CRUD actions.
+- City specific Points Of Interest. Way to view entries based on those POI tags presence.
+- Like function? (Ugh).
+- 
