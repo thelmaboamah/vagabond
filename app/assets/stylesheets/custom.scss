@@ -21,19 +21,14 @@ a:hover {
   background-color: #eee;
 }
 
-.entry-box-fix-width:hover {
-  max-width: 90%;
-  box-shadow: 3px 4px 10px rgba(6, 2, 2, 0.26) !important;
-  background-color: #eee;
+textarea {
+  height: 300px!important;
 }
 
 p {
   font-family: 'Merriweather', serif;
 }
 
-.user-entry-p, h6 {
-  color: black!important;
-}
 
 h1 {
   font-family: 'Chonburi', cursive;
