@@ -31,6 +31,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $heading;
 }
 
+h1 {
+  font-size: 48px;
+}
+
 .entry-box:hover {
   box-shadow: 3px 4px 10px rgba(6, 2, 2, 0.26) !important;
   background-color: #eee;
@@ -56,6 +60,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   text-align: center;
    li {
+    font-size: 17px;
     float: none;
     display: inline-block;
   }
