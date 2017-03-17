@@ -4,7 +4,7 @@ class EntriesController < ApplicationController
   before_action :correct_user,   only: [ :edit, :destroy]
 
   def index
-    @entries = Entry.paginate(page: params[:page], per_page: 6)
+    @entries = Entry.paginate(page: params[:page], per_page: 12)
   end
 
   def show

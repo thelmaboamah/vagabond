@@ -33,8 +33,12 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 48px;
+  color: $eggplant;
 }
 
+.img-responsive {
+  width: 100%;
+}
 .entry-box:hover {
   box-shadow: 3px 4px 10px rgba(6, 2, 2, 0.26) !important;
   background-color: #eee;
@@ -44,9 +48,12 @@ textarea {
   height: 300px!important;
 }
 
+.entry-big {
+  margin: 50px 0 30px 0;
+}
 
-.user-entry-p, h6 {
-  color: black!important;
+.entry-index-box {
+  margin-bottom: 40px;
 }
 
 .inline-heading {
@@ -64,6 +71,7 @@ textarea {
     display: inline-block;
   }
 }
+
 
 .content-container {
   margin-top: 112vh;
